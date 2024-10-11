@@ -11,7 +11,7 @@ project(nemusic
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     # enable_testing()
     # add_subdirectory(test)
-    set(CMAKE_C_FLAGS_DEBUG "-g3 -Wall -Wextra -Werror -Wpedantic -fsanitize=address -fno-omit-frame-pointer -fsanitize=undefined")
+    set(CMAKE_C_FLAGS_DEBUG "-g3 -Wall -Wextra -Werror -Wextra -fsanitize=address -fno-omit-frame-pointer -fsanitize=undefined")
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")

@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-const static char user_agent[102] =
+static const char user_agent[102] =
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/129.0.0.0 Safari/537.36";
 
