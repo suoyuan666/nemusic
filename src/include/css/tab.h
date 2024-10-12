@@ -1,8 +1,6 @@
 // clang-format off
 static const char tab_css[] =
     "#album-picture { "
-        "min-width: 200px; "
-        "min-height: 100px; "
     "}"
     "#album-name { "
         "font-family: \"Noto Sans Mono\"; "
@@ -13,6 +11,12 @@ static const char tab_css[] =
         "background-color: inherit;"
     "}"
     "#popalbum-list:hover {"
+        "background-color: inherit;"
+    "}"
+    "#listbox {"
+        "background-color: inherit;"
+    "}"
+    "#listbox:hover {"
         "background-color: inherit;"
     "}"
     ;

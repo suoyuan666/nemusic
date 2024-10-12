@@ -8,11 +8,13 @@ set(
     MAIN_LIB
     netmusic
     curl_utils
+    nemusic-gtk
     cjson
 )
 
 add_subdirectory(services)
 add_subdirectory(curl_utils)
+add_subdirectory(ne-gtk)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK4 REQUIRED gtk4)

@@ -1,9 +1,8 @@
+#ifndef CURL_UTILS_INCLUDE
+#define CURL_UTILS_INCLUDE
 #include "curl_utils/curl_utils.h"
-#include <stddef.h>
-#ifndef GTK_INCLUDE
-#define GTK_INCLUDE
-#include <gtk/gtk.h>
 #endif
+#include <stddef.h>
 
 enum AREA {
     ZH,
@@ -14,4 +13,3 @@ enum AREA {
 };
 
 void get_album_new(struct mem_with_size *content);
-void get_pop_album(GtkListBox *listbox);
