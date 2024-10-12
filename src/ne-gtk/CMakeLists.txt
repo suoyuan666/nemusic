@@ -1,5 +1,6 @@
 set (GTK_SRC
     tab_detail.c
+    main_window.c
 )
 
 set(

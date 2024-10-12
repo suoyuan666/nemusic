@@ -8,3 +8,4 @@
 #endif
 
 void set_pop_album_to_listbox(struct mem_with_size* content, GtkListBox *listbox);
+void main_window(const GApplication *app);

@@ -1,4 +1,4 @@
-#include "ne-gtk/tab_detail.h"
+#include "ne-gtk/window.h"
 #include "css/tab.h"
 #include <curl/curl.h>
 #include <curl/easy.h>
