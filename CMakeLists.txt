@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_EXTENSIONS OFF) # use c17 insead of gnuc17
 set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE) # for generate full compile_commands.json
 
 project(nemusic
     VERSION 0.1

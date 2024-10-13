@@ -7,5 +7,5 @@
 #include <gtk/gtk.h>
 #endif
 
-void set_pop_album_to_listbox(struct mem_with_size* content, GtkListBox *listbox);
+void set_pop_album_to_listbox(struct mem_with_size* content, GtkWidget *box);
 void main_window(const GApplication *app);

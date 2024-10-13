@@ -1,0 +1,1 @@
+void play_music_from_url(char* url);

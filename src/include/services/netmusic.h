@@ -13,3 +13,5 @@ enum AREA {
 };
 
 void get_album_new(struct mem_with_size *content);
+void get_album_list(char *id, struct mem_with_size *content);
+void get_song_url(char *id, struct mem_with_size *content);
