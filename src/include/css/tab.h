@@ -1,5 +1,7 @@
 // clang-format off
-static const char tab_css[] =
+#include <string_view>
+
+constexpr std::string_view tab_css =
     "#album-picture { "
     "}"
     "#album-name { "

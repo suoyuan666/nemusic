@@ -1,5 +1,5 @@
 set (MUSIC_CORE_SRC
-    music_core.c
+    music_core.cpp
 )
 
 find_package(PkgConfig REQUIRED)

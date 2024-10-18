@@ -1,12 +1,12 @@
 set (GTK_SRC
-    tab_detail.c
-    main_window.c
+    tab_detail.cpp
+    main_window.cpp
 )
 
 set(
     GTK_INCLUDE
     ${PROJECT_SOURCE_DIR}/src/include/
-    ${PROJECT_SOURCE_DIR}/third_party/
+    ${PROJECT_SOURCE_DIR}/third_party/json/include
 )
 
 add_library(
@@ -16,9 +16,8 @@ add_library(
 )
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK4 REQUIRED gtk4)
+pkg_check_modules(GTK4 REQUIRED gtkmm-4.0)
 add_definitions(${GTK4_CFLAGS_OTHER})
 
 target_include_directories(nemusic-gtk PUBLIC ${GTK4_INCLUDE_DIRS})
 target_include_directories(nemusic-gtk PUBLIC ${GTK_INCLUDE})
-target_link_libraries(nemusic-gtk PUBLIC cjson)

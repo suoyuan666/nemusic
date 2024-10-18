@@ -1,5 +1,5 @@
 set (NET_MSUSIC_SRC
-    netmusic.c
+    netmusic.cpp
 )
 
 set(
@@ -13,5 +13,11 @@ add_library(
     OBJECT
     ${NET_MSUSIC_SRC}
 )
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK4 REQUIRED gtkmm-4.0)
+add_definitions(${GTK4_CFLAGS_OTHER})
+
+target_include_directories(netmusic PUBLIC ${GTK4_INCLUDE_DIRS})
 
 target_include_directories(netmusic PUBLIC ${NET_MSUSIC_INCLUDE})

@@ -7,24 +7,25 @@ set(
 set(
     MAIN_LIB
     netmusic
-    curl_utils
+    asio_utils
     nemusic-gtk
-    cjson
-    music_core
+    nlohmann_json
+    # cjson
+    # music_core
 )
 
 add_subdirectory(services)
-add_subdirectory(curl_utils)
+add_subdirectory(asio_utils)
 add_subdirectory(ne-gtk)
-add_subdirectory(music_core)
+# add_subdirectory(music_core)
 
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK4 REQUIRED gtk4)
+pkg_check_modules(GTK4 REQUIRED gtkmm-4.0)
 add_definitions(${GTK4_CFLAGS_OTHER})
 
-add_executable(new-gtk main.c)
+add_executable(new-gtk main.cpp)
 
 target_include_directories(new-gtk PUBLIC ${GTK4_INCLUDE_DIRS})
-target_include_directories(new-gtk PUBLIC ${MAIN_INCLUDE})
+target_include_directories(new-gtk PUBLIC ${GTK_INCLUDE})
 
 target_link_libraries(new-gtk PRIVATE ${GTK4_LIBRARIES} ${MAIN_LIB})

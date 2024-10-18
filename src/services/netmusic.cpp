@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-void get_album_new(struct mem_with_size *content) {
+void get_album_new(std::string &content) {
   store_url_to_memory("https://music.163.com/api/discovery/newAlbum", content);
 }
 
-void get_album_list(char *id, struct mem_with_size *content) {
+void get_album_list(char *id, std::string &content) {
   char url[64] = "https://music.163.com/api/v1/album/";
   strcat(url, id);
   store_url_to_memory(url, content);
@@ -27,7 +27,7 @@ void get_album_list(char *id, struct mem_with_size *content) {
 *   杜比全景声音质需要设备支持，不同的设备可能会返回不同码率的 url。cookie 需要传入 `os=pc` 保证返回正常码率的 url。
 */
 
-void get_song_url(char *id, struct mem_with_size *content) {
+void get_song_url(char *id, std::string &content) {
   char url[128] = "https://music.163.com/api/song/enhance/player/url/v1?ids=[";
   strcat(url, id);
   strcat(url, "]&level=standard&encodeType=flac");
